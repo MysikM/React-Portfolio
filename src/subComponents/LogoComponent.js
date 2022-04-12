@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Logo = styled.h1`
   display: inline-block;
-  color: ${props => props.theme.text};
+  color: ${props => props.theme === 'dark' ? props.theme.text : props.theme.body};
   font-family: 'Pacifico', cursive;
   
   position: fixed;
@@ -14,7 +14,7 @@ const Logo = styled.h1`
 
 function LogoComponent(props) {
     return (
-        <Logo>
+        <Logo color={props.theme}>
             Mysik
         </Logo>
     );
