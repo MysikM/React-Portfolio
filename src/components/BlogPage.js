@@ -6,6 +6,7 @@ import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import {Blogs} from '../data/BlogData';
 import BlogComponent from "./BlogComponent";
+import AnchorComponent from '../subComponents/Anchor'
 
 const MainContainer = styled.div`
   background-image: url(${img});
@@ -45,6 +46,7 @@ function BlogPage(props) {
                 <LogoComponent />
                 <PowerButton />
                 <SocialIcons />
+                <AnchorComponent />
 
                 <Center>
                     <Grid>
