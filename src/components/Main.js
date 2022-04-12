@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import PowerButton from "../subComponents/PowerButton";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import {NavLink} from "react-router-dom";
+import {YinYang} from "./AllSvgs";
 
 const MainContainer = styled.div`
   background: ${props => props.theme.body};
@@ -74,6 +75,39 @@ const SKILLS = styled(NavLink)`
   z-index: 1;
 `;
 
+const rotate = keyframes`
+    from{
+      transform: rotate(0);
+    }
+  to{
+    transform: rotate(360deg);
+  }
+`
+
+const Center = styled.button`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &>:first-child{
+    animation: ${rotate} infinite 1.5s linear;
+  }
+  
+  &>:last-child{
+    padding-top: 1rem;
+  }
+`;
+
 function Main(props) {
     return (
         <MainContainer>
@@ -81,6 +115,11 @@ function Main(props) {
                 <PowerButton />
                 <LogoComponent />
                 <SocialIcons />
+
+                <Center>
+                    <YinYang width={200} height={200} fill='currentColor' />
+                    <span>click here</span>
+                </Center>
 
                 <Contact target="_blank" to={{pathname:"https://t.me/mysik_3301"}}>
                     <h2>
