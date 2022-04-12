@@ -5,6 +5,7 @@ import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import {NavLink} from "react-router-dom";
 import {YinYang} from "./AllSvgs";
+import Intro from "./Intro";
 
 const MainContainer = styled.div`
   background: ${props => props.theme.body};
@@ -175,6 +176,7 @@ function Main(props) {
                     </SKILLS>
                 </BottomBar>
             </Container>
+            {click && <Intro /> }
         </MainContainer>
     );
 }
