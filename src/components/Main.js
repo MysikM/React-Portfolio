@@ -151,6 +151,14 @@ function Main(props) {
 
                 <Contact target="_blank" to={{pathname:"https://t.me/mysik_3301"}}>
                     <motion.h2
+                        initial={{
+                            y: -200,
+                            transition: {type: 'spring', duration: 1.5, delay: 1}
+                        }}
+                        animate={{
+                            y: 0,
+                            transition: {type: 'spring', duration: 1.5, delay: 1}
+                        }}
                         whileHover={{scale: 1.1}}
                         whileTap={{scale: 0.9}}
                     >
@@ -159,6 +167,14 @@ function Main(props) {
                 </Contact>
                 <BLOG to="/blog">
                     <motion.h2
+                        initial={{
+                            y: -200,
+                            transition: {type: 'spring', duration: 1.5, delay: 1}
+                        }}
+                        animate={{
+                            y: 0,
+                            transition: {type: 'spring', duration: 1.5, delay: 1}
+                        }}
                         whileHover={{scale: 1.1}}
                         whileTap={{scale: 0.9}}
                     >
@@ -167,6 +183,14 @@ function Main(props) {
                 </BLOG>
                 <WORK to="/work" click={click} >
                     <motion.h2
+                        initial={{
+                            y: -200,
+                            transition: {type: 'spring', duration: 1.5, delay: 1}
+                        }}
+                        animate={{
+                            y: 0,
+                            transition: {type: 'spring', duration: 1.5, delay: 1}
+                        }}
                         whileHover={{scale: 1.1}}
                         whileTap={{scale: 0.9}}>
                         Work
@@ -175,6 +199,14 @@ function Main(props) {
                 <BottomBar>
                     <ABOUT to="/about" click={click} >
                         <motion.h2
+                            initial={{
+                                y: 200,
+                                transition: {type: 'spring', duration: 1.5, delay: 1}
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: {type: 'spring', duration: 1.5, delay: 1}
+                            }}
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
                             About.
@@ -182,6 +214,14 @@ function Main(props) {
                     </ABOUT>
                     <SKILLS to="/skills">
                         <motion.h2
+                            initial={{
+                                y: 200,
+                                transition: {type: 'spring', duration: 1.5, delay: 1}
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: {type: 'spring', duration: 1.5, delay: 1}
+                            }}
                             whileHover={{scale: 1.1}}
                             whileTap={{scale: 0.9}}>
                             My Skills.
