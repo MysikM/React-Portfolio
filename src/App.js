@@ -9,6 +9,7 @@ import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 
 function App() {
+
   return <>
 
     <GlobalStyle />
