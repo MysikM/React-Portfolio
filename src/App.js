@@ -24,10 +24,10 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route exact path="/react-portfolio" component={Main} />
-          <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/blog" component={BlogPage} />
-          <Route exact path="/work" component={WorkPage} />
-          <Route exact path="/skills" component={MySkillsPage} />
+          <Route exact path="/react-portfolio/about" component={AboutPage} />
+          <Route exact path="/react-portfolio/blog" component={BlogPage} />
+          <Route exact path="/react-portfolio/work" component={WorkPage} />
+          <Route exact path="/react-portfolio/skills" component={MySkillsPage} />
         </Switch>
       </AnimatePresence>
     </ThemeProvider>

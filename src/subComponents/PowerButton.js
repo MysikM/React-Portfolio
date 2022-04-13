@@ -37,7 +37,7 @@ const Power = styled.button`
 function PowerButton(props) {
     return (
         <Power>
-            <NavLink to="/" >
+            <NavLink to="/react-portfolio" >
                 <PowerBtn width={30} height={30} fill='currentColor' />
             </NavLink>
         </Power>
