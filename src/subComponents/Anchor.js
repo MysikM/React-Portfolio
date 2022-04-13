@@ -63,7 +63,7 @@ function AnchorComponent(props) {
          </PreDisplay>
             <Slider ref={ref}>
                 {
-                    [...Array(25)].map((x,id) => {
+                    [...Array(props.numbers)].map((x,id) => {
                         return <Link key={id} width={25} height={25} fill='currentColor' className="chain"/>
                     })
                 }
