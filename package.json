@@ -1,6 +1,6 @@
 {
-  "homepage": "http://MysikM.github.io/React-Portfolio",
-  "name": "React-Portfolio",
+  "homepage": "http://MysikM.github.io/react-portfolio",
+  "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
