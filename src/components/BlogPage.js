@@ -42,13 +42,14 @@ const Grid = styled.div`
 `;
 
 const container = {
-    hidden: {opacity: 0},
+    hidden: {opacity: 0, x: 1200},
     show: {
         opacity: 1,
         transition:{
             staggerChildren: 0.5,
             duration: 0.5,
-        }
+        },
+        x: 0
     }
 }
 

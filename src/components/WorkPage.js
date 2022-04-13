@@ -10,7 +10,7 @@ import {YinYang} from "./AllSvgs";
 import BigTitle from "../subComponents/BigTitle";
 import {motion} from 'framer-motion';
 
-const Box = styled.div`
+const Box = styled(motion.div)`
   background-color: ${props => props.theme.body};
   height: 400vh;
   position: relative;
@@ -69,7 +69,16 @@ function WorkPage(props) {
 
     return (
         <ThemeProvider theme={darkTheme}>
-            <Box>
+            <Box
+                initial={{
+                    x: -1200,
+                    transition: {type: 'spring', duration: 1.5, delay: 0}
+                }}
+                animate={{
+                    x: 0,
+                    transition: {type: 'spring', duration: 1.5, delay: 0}
+                }}
+            >
                 <LogoComponent theme='dark' />
                 <SocialIcons theme='dark' />
                 <PowerButton />

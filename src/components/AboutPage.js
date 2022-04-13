@@ -7,8 +7,9 @@ import PowerButton from "../subComponents/PowerButton";
 import ParticleComponent from "../subComponents/ParticleComponent";
 import Astronaut from '../assets/Images/spaceman.png';
 import BigTitle from "../subComponents/BigTitle";
+import {motion} from "framer-motion";
 
-const Box = styled.div`
+const Box = styled(motion.div)`
   background-color: ${props => props.theme.body};
   width: 100vw;
   height: 100vh;
@@ -61,7 +62,16 @@ const Main = styled.div`
 function AboutPage(props) {
     return (
         <ThemeProvider theme={darkTheme}>
-            <Box>
+            <Box
+                initial={{
+                    y: 1200,
+                    transition: {type: 'spring', duration: 1.5, delay: 0}
+                }}
+                animate={{
+                    y: 0,
+                    transition: {type: 'spring', duration: 1.5, delay: 0}
+                }}
+            >
                 <LogoComponent theme='dark' />
                 <SocialIcons theme='dark' />
                 <PowerButton />
